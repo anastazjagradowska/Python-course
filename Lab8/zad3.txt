@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+#wyrysowanie krzywej y(x), 'o' oznacza styl punktu
+plt.plot(x, y, 'o')
+#wyrysowanie krzywej y(x) wraz z niepewnościami
+plt.errorbar(x, y, marker='*', yerr=dy)
+#opis osi
+plt.xlabel('x')
+#zapis do pliku, format określony przez rozszerzenie w nazwie
+plt.savefig('res.pdf')
+
+A to może się przydać do łatwego wczytywania plików (ale dzisiaj można z tego skorzystać tylko w skrypcie generującym wykresy)
+
+import numpy
+x,y=numpy.loadtxt(nazwa, unpack=True)
